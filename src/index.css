@@ -4,8 +4,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-body h1 {
-  color: red;
+
+.wrapper {
+  background-color: #f5f5f7;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
 }
 
 code {
