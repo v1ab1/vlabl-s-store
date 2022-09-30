@@ -24,7 +24,3 @@ function App() {
 
 export default App;
 
-floors.forEach(floor => {
-  floor.on("up_button_pressed", () => elevator.goToFloor(floor.floorNum()));
-  floor.on("down_button_pressed", () => elevator.goToFloor(floor.floorNum()));
-});
