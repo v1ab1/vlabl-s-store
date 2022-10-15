@@ -60,6 +60,73 @@ header {
   bottom: 0;
 }
 
+.items-wrapper {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.card {
+  background-color: white;
+  width: 254px;
+  border-radius: 10px;
+  padding: 25px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.card p {
+  margin: 0;
+}
+.card .model-name {
+  padding-top: 10px;
+  font-size: 18px;
+}
+.card .tech-spec {
+  font-size: 12px;
+  padding: 5px 0;
+  opacity: 60%;
+}
+.card .tech-spec:hover {
+  opacity: 100%;
+}
+.card .buy-button {
+  border: none;
+  color: white;
+  background: #379afd;
+  width: 100%;
+  padding: 8px 0;
+  border-radius: 6px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.card .buy-button:hover {
+  background: #0078f0;
+}
+
+.price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 18px;
+}
+.price-wrapper span span {
+  opacity: 40%;
+}
+
+.price-wrapper:hover span span {
+  opacity: 100%;
+}
+
+.price-text {
+  opacity: 60%;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }/*# sourceMappingURL=index.css.map */
