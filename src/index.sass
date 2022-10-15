@@ -1,7 +1,7 @@
 // 1380
 body
+  font-family: 'SF Pro Display', Helvetica, Arial, sans-serif
   margin: 0
-  font-family: system-ui
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 .wrapper
@@ -18,8 +18,30 @@ header
     display: flex
     align-items: center
 .header-store
-  color: white
-  margin-left: 20px
+  color: #f5f5f7
+  margin-left: 40px
+  font-size: 14px
+.content
+  max-width: 988px
+  margin: 0 auto
+  padding-top: 15px
+.content-header
+  display: flex
+  justify-content: space-between
+  button
+    font-size: 14px
+    margin-right: 20px
+    border: none
+    background: none
+    text-transform: capitalize
+    position: relative
+  button:last-of-type
+    margin-right: 10px
+  button:after
+    content: url('../public/media/down-arrow.svg')
+    margin-left: 3px
+    position: absolute
+    bottom: 0
 code
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace
 
