@@ -41,7 +41,21 @@ function App() {
           </div>
         </div>
         <div className="items-wrapper">
-          
+          <div className="card">
+            <img src="" alt="">
+            <p></p>
+            <div>
+                <span>
+                  Price:
+                </span>
+                <b>
+                  100$
+                </b>
+            </div>
+            <button>
+              Buy
+            </button>
+          </div>
         </div>
       </div>
     </div>

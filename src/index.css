@@ -38,6 +38,7 @@ header {
 }
 
 .content-header {
+  padding-bottom: 15px;
   display: flex;
   justify-content: space-between;
 }
