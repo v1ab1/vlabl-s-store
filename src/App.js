@@ -2,10 +2,10 @@ function App() {
   return (
     <div className="wrapper">
       <header>
-        <div>
+        <div className="header">
           <div className="headerLeft">
             <img src="./media/logo.svg" alt="" />
-            <span className="text-white">
+            <span className="header-store">
               Store
             </span>
           </div>
@@ -23,4 +23,3 @@ function App() {
 }
 
 export default App;
-

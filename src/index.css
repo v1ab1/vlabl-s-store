@@ -12,15 +12,22 @@ body {
 header {
   background: rgba(0, 0, 0, 0.8);
 }
-header div {
+
+.header {
   display: flex;
   justify-content: space-between;
   padding: 0 22px;
   max-width: 980px;
   margin: 0 auto;
 }
-header div div {
+.header div {
   display: flex;
+  align-items: center;
+}
+
+.header-store {
+  color: white;
+  margin-left: 20px;
 }
 
 code {
