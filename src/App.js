@@ -25,9 +25,6 @@ function App() {
               diagonal
             </button>
             <button>
-              color
-            </button>
-            <button>
               CPU
             </button>
             <button>
@@ -46,6 +43,22 @@ function App() {
         <div className="items-wrapper">
           <div className="items">
             <div className="card">
+                <img width={254} height={153} src="./media/items/2.jpeg" alt=""></img>
+                <p className="model-name">Macbook Pro 16</p>
+                <p className="tech-spec">M1 MAX/32GB/512GB/2022</p>
+                <div className="price-wrapper">
+                    <span className="price-text">
+                      Price:
+                    </span>
+                    <span>
+                    <span>$</span> 3 000
+                    </span>
+                </div>
+                <button className="buy-button">
+                  Buy
+                </button>
+              </div>
+            <div className="card">
               <img width={254} height={153} src="./media/items/1.jpeg" alt=""></img>
               <p className="model-name">Macbook Pro 14</p>
               <p className="tech-spec">M1 MAX/32GB/512GB/2022</p>
@@ -62,15 +75,15 @@ function App() {
               </button>
             </div>
             <div className="card">
-              <img width={254} height={153} src="./media/items/2.jpeg" alt=""></img>
-              <p className="model-name">Macbook Pro 16</p>
-              <p className="tech-spec">M1 MAX/32GB/512GB/2022</p>
+              <img width={254} height={153} src="./media/items/4.jpeg" alt=""></img>
+              <p className="model-name">Macbook Air</p>
+              <p className="tech-spec">M2/24GB/512GB/2022</p>
               <div className="price-wrapper">
                   <span className="price-text">
                     Price:
                   </span>
                   <span>
-                  <span>$</span> 3 000
+                  <span>$</span> 1 200
                   </span>
               </div>
               <button className="buy-button">
@@ -87,22 +100,6 @@ function App() {
                   </span>
                   <span>
                   <span>$</span> 2 000
-                  </span>
-              </div>
-              <button className="buy-button">
-                Buy
-              </button>
-            </div>
-            <div className="card">
-              <img width={254} height={153} src="./media/items/4.jpeg" alt=""></img>
-              <p className="model-name">Macbook Air</p>
-              <p className="tech-spec">M2/24GB/512GB/2022</p>
-              <div className="price-wrapper">
-                  <span className="price-text">
-                    Price:
-                  </span>
-                  <span>
-                  <span>$</span> 1 200
                   </span>
               </div>
               <button className="buy-button">
