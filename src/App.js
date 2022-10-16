@@ -16,6 +16,18 @@ function App() {
         </div>
       </header>
       <div className="content">
+        <div className="bag-wrapper">
+          <div className="bag-content">
+            <div className="bag-item">
+              <img src="./media/items/1.jpeg" alt=""></img>
+              <span>Macbook Pro 16</span>
+              
+            </div>
+          </div>
+          <button className="buy-button">
+            Check Out
+          </button>
+        </div>
         <div className='content-header'>
           <div>
             <button>
