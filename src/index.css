@@ -139,10 +139,10 @@ header {
   padding: 10px;
   padding-bottom: 15px;
   border: 1px solid rgb(210, 210, 215);
+  max-height: 100vh;
 }
 .bag-wrapper div {
   width: 100%;
-  height: 400px;
 }
 .bag-wrapper .buy-button {
   border: none;
@@ -156,6 +156,42 @@ header {
 }
 .bag-wrapper .buy-button:hover {
   background: #0078f0;
+}
+.bag-wrapper .bag-content {
+  overflow: auto;
+}
+.bag-wrapper .bag-content .bag-item {
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgb(210, 210, 215);
+}
+.bag-wrapper .bag-content .bag-item .NamePrice {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 45px;
+  align-items: center;
+}
+.bag-wrapper .bag-content img {
+  height: 65px;
+  width: auto;
+  flex-shrink: 0;
+}
+.bag-wrapper .bag-content span {
+  font-size: 14px;
+}
+.bag-wrapper .bag-content svg {
+  padding: 2px;
+  border: 1px solid rgb(210, 210, 215);
+  border-radius: 999px;
+  flex-shrink: 0;
+  opacity: 35%;
+}
+.bag-wrapper .bag-content svg:hover {
+  opacity: 100%;
 }
 
 code {

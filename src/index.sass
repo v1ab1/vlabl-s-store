@@ -107,9 +107,9 @@ header
   padding: 10px
   padding-bottom: 15px
   border: 1px solid rgb(210,210,215)
+  max-height: 100vh
   div
     width: 100%
-    height: 400px
   .buy-button
     border: none
     color: white
@@ -121,6 +121,35 @@ header
     cursor: pointer
   .buy-button:hover
     background: #0078f0
+  .bag-content
+    overflow: auto
+    .bag-item
+      display: flex
+      justify-content: space-between
+      height: auto
+      align-items: center
+      padding-bottom: 15px
+      border-bottom: 1px solid rgb(210, 210, 215)
+      .NamePrice
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        height: 45px
+        align-items: center
+    img
+      height: 65px
+      width: auto
+      flex-shrink: 0
+    span
+      font-size: 14px
+    svg
+      padding: 2px
+      border: 1px solid rgb(210,210,215)
+      border-radius: 999px
+      flex-shrink: 0
+      opacity: 35%
+    svg:hover
+      opacity: 100%
 code
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace
 @media screen and (max-width: 1110px)
