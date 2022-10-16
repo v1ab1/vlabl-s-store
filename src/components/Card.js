@@ -1,15 +1,15 @@
-function Card() {
+function Card(props) {
     return (
         <div className="card">
-            <img width={254} height={153} src="./media/items/5.jpeg" alt=""></img>
-            <p className="model-name">Macbook Air</p>
-            <p className="tech-spec">M1/16GB/512GB/2022</p>
+            <img height={153} src={props.imageUrl} alt=""></img>
+            <p className="model-name">{props.title}</p>
+            <p className="tech-spec">{props.spec}</p>
             <div className="price-wrapper">
                 <span className="price-text">
                     Price:
                 </span>
                 <span>
-                    <span>$</span> 999
+                    <span>$</span> {props.price}
                 </span>
             </div>
             <button className="buy-button">

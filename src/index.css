@@ -69,11 +69,14 @@ header {
 
 .card {
   background-color: white;
-  width: 254px;
+  width: 26%;
   border-radius: 10px;
   padding: 25px;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 3%;
+}
+.card img {
+  width: 100%;
 }
 .card p {
   margin: 0;
@@ -125,7 +128,8 @@ header {
 .items {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 3%;
 }
 
 .bag-wrapper {
