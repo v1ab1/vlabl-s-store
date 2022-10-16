@@ -3,9 +3,17 @@ import Header from './components/Header';
 import Bag from './components/Bag';
 import Filters from './components/Filters';
 
-const arr = [
-  { name: 'Macbook Pro 16', price: '3000'},
-  { name: 'Macbook Pro 14', price: '2500'},
+const arr = [ {
+  title: "Macbook Pro 16",
+  spec: "M1 MAX/32GB/512GB/2022",
+  price: "3000",
+  imageUrl: "./media/items/2.jpeg",
+},{
+  title: "Macbook Pro 14",
+  spec: "M1 MAX/32GB/512GB/2022",
+  price: "2500",
+  imageUrl: "./media/items/1.jpeg",
+},
 ];
 
 function App() {
@@ -17,18 +25,14 @@ function App() {
         <Filters />
         <div className="items-wrapper">
           <div className="items">
-            <Card 
-              title="Macbook Pro 16" 
-              spec="M1 MAX/32GB/512GB/2022" 
-              price="3000" 
-              imageUrl="./media/items/2.jpeg" 
-            />
-            <Card 
-              title="Macbook Pro 14" 
-              spec="M1 MAX/32GB/512GB/2022" 
-              price="3000" 
-              imageUrl="./media/items/1.jpeg" 
-            />
+            {arr.map((obj) => (
+              <Card 
+                title={obj.title}
+                spec={obj.spec}
+                price={obj.price}
+                imageUrl={obj.imageUrl}
+              />
+            ))}
           </div>
         </div>
       </div>
