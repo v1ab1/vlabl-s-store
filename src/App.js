@@ -1,3 +1,5 @@
+import Card from './components/Card';
+
 function App() {
   return (
     <div className="wrapper">
@@ -68,6 +70,7 @@ function App() {
         </div>
         <div className="items-wrapper">
           <div className="items">
+            <Card></Card>
             <div className="card">
                 <img width={254} height={153} src="./media/items/2.jpeg" alt=""></img>
                 <p className="model-name">Macbook Pro 16</p>
@@ -126,22 +129,6 @@ function App() {
                   </span>
                   <span>
                   <span>$</span> 2 000
-                  </span>
-              </div>
-              <button className="buy-button">
-                Buy
-              </button>
-            </div>
-            <div className="card">
-              <img width={254} height={153} src="./media/items/5.jpeg" alt=""></img>
-              <p className="model-name">Macbook Air</p>
-              <p className="tech-spec">M1/16GB/512GB/2022</p>
-              <div className="price-wrapper">
-                  <span className="price-text">
-                    Price:
-                  </span>
-                  <span>
-                  <span>$</span> 999
                   </span>
               </div>
               <button className="buy-button">
