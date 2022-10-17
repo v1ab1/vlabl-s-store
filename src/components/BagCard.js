@@ -1,13 +1,13 @@
-function BagCard() {
+function BagCard(props) {
     return (
         <div className="bag-item">
-            <img src="./media/items/1.jpeg" alt="" />
+            <img src={props.imageUrl} alt="" />
             <div className="NamePrice">
                 <span>
-                    Macbook Pro 16
+                    {props.title}
                 </span>
                 <span>
-                    <span>$</span> 3 000
+                    <span>$</span> {props.price}
                 </span>
             </div>  
             <svg width="15px" height="15px" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
