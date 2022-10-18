@@ -13,6 +13,11 @@ const arr = [ {
   spec: "M1 MAX/32GB/512GB/2022",
   price: "2500",
   imageUrl: "./media/items/1.jpeg",
+},{
+  title: "Macbook Pro",
+  spec: "M1/16GB/512GB/2022",
+  price: "2000",
+  imageUrl: "./media/items/3.jpeg",
 },
 ];
 

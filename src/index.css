@@ -92,6 +92,7 @@ header {
 }
 .card .buy-button {
   border: none;
+  border: 1px solid white;
   color: white;
   background: #379afd;
   width: 100%;
@@ -102,6 +103,20 @@ header {
 }
 .card .buy-button:hover {
   background: #0078f0;
+}
+.card .buy-done-button {
+  border: 1px solid #379afd;
+  color: #379afd;
+  background: white;
+  width: 100%;
+  padding: 8px 0;
+  border-radius: 6px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.card .buy-done-button:hover {
+  color: #0078f0;
+  border: 1px solid #0078f0;
 }
 
 .price-wrapper {
