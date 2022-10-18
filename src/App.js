@@ -31,6 +31,7 @@ function App() {
                 spec={obj.spec}
                 price={obj.price}
                 imageUrl={obj.imageUrl}
+                onClick={obj.id}
               />
             ))}
           </div>

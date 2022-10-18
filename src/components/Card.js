@@ -12,7 +12,7 @@ function Card(props) {
                     <span>$</span> {props.price}
                 </span>
             </div>
-            <button className="buy-button">
+            <button onClick={props.id} className="buy-button">
                 Buy
             </button>
         </div>
