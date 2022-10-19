@@ -1,13 +1,14 @@
-function BagCard(props) {
+import React from 'react';
+function BagCard({imageUrl, title, price}) {
     return (
         <div className="bag-item">
-            <img src={props.imageUrl} alt="" />
+            <img src={imageUrl} alt="" />
             <div className="NamePrice">
                 <span>
-                    {props.title}
+                    {title}
                 </span>
                 <span>
-                    <span>$</span> {props.price}
+                    <span>$</span> {price}
                 </span>
             </div>  
             <svg width="15px" height="15px" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">

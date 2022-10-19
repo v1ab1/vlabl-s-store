@@ -1,20 +1,21 @@
 import React from 'react';
-function Card(props) {
+function Card({imageUrl, title, spec, price, onBuy}) {
     const [isAdded, setIsAdded] = React.useState();
     const onClickBuy = () => {
-        setIsAdded(true);
+        onBuy({title, price, imageUrl});
+        setIsAdded(!isAdded);
     };
     return (
-        <div className="card">
-            <img height={153} src={props.imageUrl} alt=""></img>
-            <p className="model-name">{props.title}</p>
-            <p className="tech-spec">{props.spec}</p>
+        <div className="card"> 
+            <img height={153} src={imageUrl} alt=""></img>
+            <p className="model-name">{title}</p>
+            <p className="tech-spec">{spec}</p>
             <div className="price-wrapper">
                 <span className="price-text">
                     Price:
                 </span>
                 <span>
-                    <span>$</span> {props.price}
+                    <span>$</span> {price}
                 </span>
             </div>
             <button onClick={onClickBuy} className={isAdded ? "buy-done-button" : "buy-button"}>

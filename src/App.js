@@ -2,41 +2,42 @@ import Card from './components/Card';
 import Header from './components/Header';
 import Bag from './components/Bag';
 import Filters from './components/Filters';
-
-const arr = [ {
-  title: "Macbook Pro 16",
-  spec: "M1 MAX/32GB/512GB/2022",
-  price: "3000",
-  imageUrl: "./media/items/2.jpeg",
-},{
-  title: "Macbook Pro 14",
-  spec: "M1 MAX/32GB/512GB/2022",
-  price: "2500",
-  imageUrl: "./media/items/1.jpeg",
-},{
-  title: "Macbook Pro",
-  spec: "M1/16GB/512GB/2022",
-  price: "2000",
-  imageUrl: "./media/items/3.jpeg",
-},
-];
+import React from 'react';
 
 function App() {
+  const [items, setItems] = React.useState([]);
+  const [bagItems, setBagItems] = React.useState([]);
+  const [bagOpened, setBagOpened] = React.useState(false);
+
+  React.useEffect(() => {
+    fetch('https://634f201e4af5fdff3a6ee8b5.mockapi.io/items')
+      .then((res) => {
+        return res.json();
+      })
+      .then((json) => {
+        setItems(json);
+      });
+  }, []);
+
+  const onBuyButton = (obj) => {
+    setBagItems([...bagItems, obj]);
+  };
+
   return (
     <div className="wrapper">
-      <Header />
+      <Header onClickBag={() => setBagOpened(!bagOpened)} />
       <div className="content">
-        <Bag />
+        {bagOpened && <Bag />}
         <Filters />
         <div className="items-wrapper">
           <div className="items">
-            {arr.map((obj) => (
+            {items.map((item) => (
               <Card 
-                title={obj.title}
-                spec={obj.spec}
-                price={obj.price}
-                imageUrl={obj.imageUrl}
-                onClick={obj.id}
+                title={item.title}
+                spec={item.spec}
+                price={item.price}
+                imageUrl={item.imageUrl}
+                onBuy={(obj) => {onBuyButton(obj)}}
               />
             ))}
           </div>
