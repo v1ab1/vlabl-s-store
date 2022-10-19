@@ -162,7 +162,6 @@ header {
   padding: 10px;
   padding-bottom: 15px;
   border: 1px solid rgb(210, 210, 215);
-  max-height: 100vh;
 }
 .bag-wrapper div {
   width: 100%;
