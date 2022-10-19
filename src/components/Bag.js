@@ -1,12 +1,13 @@
 import BagCard from './BagCard';
 import React from 'react';
 
-function Bag({items = []}) {
+function Bag({bagItems = []}) {
     return (
         <div className="bag-wrapper">
             <div className="bag-content">
-            {items.map((obj) => (
-              <BagCard 
+            {bagItems.map((obj, index) => (
+              <BagCard
+                key={index}
                 title={obj.title}
                 price={obj.price}
                 imageUrl={obj.imageUrl}
