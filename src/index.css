@@ -133,9 +133,6 @@ header {
   opacity: 40%;
 }
 
-.card:hover .price-wrapper span span {
-  opacity: 100%;
-}
 .card:hover .tech-spec {
   opacity: 100%;
 }
@@ -182,6 +179,12 @@ header {
 .bag-wrapper .bag-content {
   overflow: auto;
 }
+.bag-wrapper .bag-content h1 {
+  margin: 0;
+  font-size: 25px;
+  text-align: center;
+  padding: 20px;
+}
 .bag-wrapper .bag-content .bag-item {
   display: flex;
   justify-content: space-between;
@@ -217,8 +220,67 @@ header {
   opacity: 100%;
 }
 
+#total {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+#total p {
+  margin: 0;
+  font-size: 18px;
+}
+#total span {
+  font-size: 18px;
+  opacity: 60%;
+}
+
+.total-price {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.total-price p {
+  margin: 0;
+  font-size: 18px;
+}
+.total-price span {
+  font-size: 18px;
+  opacity: 60%;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+input {
+  font-family: "SF Pro Display", system-ui, sans-serif;
+  width: -webkit-fill-available;
+  margin-bottom: 15px;
+  font-size: 18px;
+  border: 1px solid #379afd;
+  border-radius: 6px;
+  padding: 5px 10px;
+}
+
+input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+input:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+input::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+input:focus {
+  outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 
 @media screen and (max-width: 1110px) {

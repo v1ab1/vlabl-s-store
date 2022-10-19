@@ -1,6 +1,6 @@
 import React from 'react';
 import {ReactComponent as CrossIcon} from '../svg/cross.svg';
-function BagCard({imageUrl, title, price}) {
+function BagCard({imageUrl, title, price, id, onRemove}) {
     return (
         <div className="bag-item">
             <img src={imageUrl} alt="" />
@@ -12,7 +12,7 @@ function BagCard({imageUrl, title, price}) {
                     <span>$</span> {price}
                 </span>
             </div>  
-            <CrossIcon />
+            <CrossIcon onClick={() => onRemove(id)} />
         </div>
     );
 }
