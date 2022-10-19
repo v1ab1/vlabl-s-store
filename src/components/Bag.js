@@ -1,7 +1,8 @@
 import BagCard from './BagCard';
 import React from 'react';
+import {ReactComponent as ArrowIcon} from '../svg/arrow-left.svg';
 
-function Bag({bagItems = [], onRemove, handleBuy}) {
+function Bag({bagItems = [], onRemove, handleBuy, setBuy}) {
     return (
         <div className="bag-wrapper">
             {handleBuy ? (<div>
@@ -20,13 +21,14 @@ function Bag({bagItems = [], onRemove, handleBuy}) {
                   bagItems.length === 0 ? (<h1>Your bag is empty</h1>) : <div className='total-price' id="total"><span className="total-span">Price:</span><p><span className="total-span">$ </span>500</p></div>
                 }
               </div>
-              <button onClick={handleBuy} className="buy-button">
+              <button onClick={() => {setBuy(!handleBuy)}} className="buy-button">
                   Check Out
               </button>
               </div>) :
               (
                 <div>
                   <div>
+                    <div onClick={() => {setBuy(!handleBuy)}} className='arrowLeft'><ArrowIcon /></div>
                     <input type="text" placeholder="First name" />
                     <input type="text" placeholder="Last name" />
                     <input type="text" placeholder="City" />

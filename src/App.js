@@ -34,7 +34,7 @@ function App() {
     <div className="wrapper">
       <Header onClickBag={() => setBagOpened(!bagOpened)} />
       <div className="content">
-        {bagOpened && <Bag bagItems={bagItems} onRemove={onRemoveItem} handleBuy={handleBuying} />}
+        {bagOpened && <Bag bagItems={bagItems} onRemove={onRemoveItem} handleBuy={handleBuying} setBuy={setHandleBuying} />}
         <Filters />
         <div className="items-wrapper">
           <div className="items">
