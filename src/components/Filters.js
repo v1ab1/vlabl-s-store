@@ -3,7 +3,7 @@ function Filters() {
         <div className='content-header'>
             <div>
                 <button>
-                    model line
+                    model
                 </button>
                 <button>
                     diagonal
@@ -15,7 +15,7 @@ function Filters() {
                     RAM
                 </button>
                 <button>
-                    year of issue
+                    year
                 </button>
             </div>
             <div>
