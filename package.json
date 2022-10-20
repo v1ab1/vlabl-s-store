@@ -1,5 +1,6 @@
 {
   "name": "vlablsstore",
+  "homepage": "https://v1ab1.github.io/vlabl-s-store",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,6 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "autoprefixer": "^10.4.12",
     "axios": "^1.1.3",
+    "github-pages": "^3.0.2",
     "node-sass": "^6.0.1",
     "postcss-cli": "^10.0.0",
     "react": "^18.2.0",
@@ -22,7 +24,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build:css": "build src/App.css -o src/index.css",
-    "watch:css": "chokidar 'src/App.css' -c 'npm run build:css'"
+    "watch:css": "chokidar 'src/App.css' -c 'npm run build:css'",
+    "predeploy" : "npm run build",
+  "deploy" : "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
