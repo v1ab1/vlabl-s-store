@@ -5,9 +5,11 @@ import Filters from './components/Filters';
 import axios from 'axios';
 import {useEffect,useState} from 'react';
 import spin from './svg/spin.gif';
+import {Route, Routes} from "react-router-dom";
 
 function App() {
   const [items, setItems] = useState([]);
+  const [items2, setItems2] = useState([]);
   const [bagItems, setBagItems] = useState([]);
   const [bagOpened, setBagOpened] = useState(false);
   const [handleBuying, setHandleBuying] = useState(true);
@@ -15,6 +17,9 @@ function App() {
   useEffect(() => {
     axios.get('https://634f201e4af5fdff3a6ee8b5.mockapi.io/items').then((res) => {
       setItems(res.data);
+    });
+    axios.get('https://634f201e4af5fdff3a6ee8b5.mockapi.io/items2').then((res) => {
+      setItems2(res.data);
     });
     axios.get('https://634f201e4af5fdff3a6ee8b5.mockapi.io/bag').then((res) => {
       setBagItems(res.data);
@@ -48,16 +53,38 @@ function App() {
         <div className="items-wrapper">
           {items.length === 0 ? <img className='spin' src={spin} alt="" /> : null}
           <div className="items">
-            {items.map((item, index) => (
-              <Card 
-                key={index}
-                title={item.title}
-                spec={item.spec}
-                price={item.price}
-                imageUrl={item.imageUrl}
-                onBuy={onBuyButton}
-              />
-            ))}
+          <Routes>
+            <Route path="/" element={
+              <>
+                {items.map((item, index) => (
+                  <Card 
+                    key={index}
+                    title={item.title}
+                    spec={item.spec}
+                    price={item.price}
+                    imageUrl={item.imageUrl}
+                    onBuy={onBuyButton}
+                  />
+                ))}
+              </>
+            }>
+            </Route>
+            <Route path="/desktop" element={
+              <>
+                {items2.map((item, index) => (
+                  <Card 
+                    key={index}
+                    title={item.title}
+                    spec={item.spec}
+                    price={item.price}
+                    imageUrl={item.imageUrl}
+                    onBuy={onBuyButton}
+                  />
+                ))}
+              </>
+            }>
+            </Route>
+          </Routes>
           </div>
         </div>
       </div>
