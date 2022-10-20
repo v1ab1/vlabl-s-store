@@ -3,7 +3,9 @@ import {ReactComponent as CrossIcon} from '../svg/cross.svg';
 function BagCard({imageUrl, title, price, id, onRemove}) {
     return (
         <div className="bag-item">
-            <img src={imageUrl} alt="" />
+            <div className='bag-pic'>
+                <img src={imageUrl} alt="" />
+            </div>
             <div className="NamePrice">
                 <span>
                     {title}

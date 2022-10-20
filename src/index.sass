@@ -19,6 +19,8 @@
 	font-family: 'SF Pro Display'
 	font-weight: 700
 	font-style: normal
+a
+  text-decoration: none
 body
   font-family: 'SF Pro Display', system-ui, sans-serif
   margin: 0
@@ -79,7 +81,9 @@ header
   text-align: center
   margin-bottom: 3%
   img
-    width: 100%
+    max-width: 100%
+    display: flex
+    margin: 0 auto
   p
     margin: 0
   .model-name
@@ -236,6 +240,10 @@ input::-webkit-inner-spin-button
   height: 30px
   margin: 40vh auto
   display: flex
+.bag-pic
+  width: 75%
+  display: flex
+  justify-content: center
 @media screen and (max-width: 1110px)
   .bag-wrapper
     right: 0
