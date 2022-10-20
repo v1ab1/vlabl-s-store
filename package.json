@@ -20,7 +20,7 @@
   },
   "scripts": {
     "start": "concurrently -n React 'npm run watch:css' 'react-scripts start'",
-    "build": "npm run build:css && react-scripts build",
+    "build": "npm run build:react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build:css": "build src/App.css -o src/index.css",
