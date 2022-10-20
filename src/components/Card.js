@@ -2,8 +2,10 @@ import React from 'react';
 function Card({imageUrl, title, spec, price, onBuy}) {
     const [isAdded, setIsAdded] = React.useState();
     const onClickBuy = () => {
-        onBuy({title, price, imageUrl});
         setIsAdded(!isAdded);
+        if (!isAdded) {
+            onBuy({title, price, imageUrl});
+        }
     };
     return (
         <div className="card"> 
