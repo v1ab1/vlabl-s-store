@@ -23,7 +23,7 @@
     "build": "npm run build:css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:css": "build src/App.css -o src/index.css",
+    "build:css": "build -o src/index.css",
     "watch:css": "chokidar 'src/App.css' -c 'npm run build:css'",
     "predeploy" : "npm run build",
   "deploy" : "gh-pages -d build"
