@@ -1,8 +1,23 @@
 import BagCard from './BagCard';
 import React from 'react';
 import {ReactComponent as ArrowIcon} from '../svg/arrow-left.svg';
+import axios from 'axios';
 
 function Bag({bagItems = [], onRemove, handleBuy, setBuy, setOpen, open}) {
+    function EmptyFormCheck() {
+      const forms = document.getElementsByClassName("forms");
+      for (let i in forms) {
+        if(forms[i].value == '') {
+          forms[i].style.border = "1px solid red";
+        }
+      }
+      if (forms[0].value !== '' && forms[1].value !== '' && forms[2].value !== '' && forms[3].value !== '' && forms[4].value !== '') {
+        setBuy(!handleBuy);
+        setOpen(!open);
+        let formsData = [forms[0].value, forms[1].value, forms[2].value, forms[3].value, forms[4].value];
+        axios.post('https://634f201e4af5fdff3a6ee8b5.mockapi.io/personalData', formsData);
+      }
+    }
     return (
         <div className="bag-wrapper">
             {handleBuy ? (<div>
@@ -18,7 +33,7 @@ function Bag({bagItems = [], onRemove, handleBuy, setBuy, setOpen, open}) {
                   />
                 ))} 
                 {
-                  bagItems.length === 0 ? (<h1>Your bag is empty</h1>) : <div className='total-price' id="total"><span className="total-span">Price:</span><p><span className="total-span">$ </span>500</p></div>
+                  bagItems.length === 0 ? (<h1>Your bag is empty</h1>) : <div className='total-price' id="total"><span className="total-span">Price:</span><p><span className="total-span">$ </span>{bagItems.reduce((sum, obj) => obj.price + sum, 0)}</p></div>
                 }
               </div>
               <button onClick={() => {setBuy(!handleBuy)}} className="buy-button">
@@ -26,25 +41,25 @@ function Bag({bagItems = [], onRemove, handleBuy, setBuy, setOpen, open}) {
               </button>
               </div>) :
               (
-                <div>
+                <>
                   <div>
                     <div onClick={() => {setBuy(!handleBuy)}} className='arrowLeft'><ArrowIcon /></div>
-                    <input type="text" placeholder="First name" />
-                    <input type="text" placeholder="Last name" />
-                    <input type="text" placeholder="City" />
-                    <input type="text" placeholder="Adress" />
-                    <input type="number" placeholder="Phone" />
+                    <input className="forms" type="text" placeholder="First name" />
+                    <input className="forms" type="text" placeholder="Last name" />
+                    <input className="forms" type="text" placeholder="City" />
+                    <input className="forms" type="text" placeholder="Adress" />
+                    <input className="forms" type="number" placeholder="Phone" />
                   </div>
                   <div className='total-price'>
                     <span className="total-span">Price:</span>
-                    <p><span className="total-span">$ </span>500</p>
+                    <p><span className="total-span">$ </span>{bagItems.reduce((sum, obj) => obj.price + sum, 0)}</p>
                   </div>
-                  <div onClick={() => setBuy(!handleBuy)}>
-                    <button onClick={() => setOpen(!open)} className="buy-button">
+                  <div>
+                    <button onClick={() => EmptyFormCheck()} className="buy-button">
                       Pay
                     </button>
                   </div>
-                </div>
+                </>
               )
             }
         </div>
