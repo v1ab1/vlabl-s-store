@@ -10,6 +10,7 @@ import {Route, Routes} from "react-router-dom";
 function App() {
   let [items, setItems] = useState([]);
   let [items2, setItems2] = useState([]);
+  let [items3, setItems3] = useState([]);
   const [bagItems, setBagItems] = useState([]);
   const [bagOpened, setBagOpened] = useState(false);
   const [handleBuying, setHandleBuying] = useState(true);
@@ -20,6 +21,9 @@ function App() {
     });
     axios.get('https://634f201e4af5fdff3a6ee8b5.mockapi.io/items2').then((res) => {
       setItems2(res.data);
+    });
+    axios.get('https://635401c1ccce2f8c02013cf9.mockapi.io/items3').then((res) => {
+      setItems3(res.data);
     });
     axios.get('https://634f201e4af5fdff3a6ee8b5.mockapi.io/bag').then((res) => {
       setBagItems(res.data);
@@ -47,14 +51,18 @@ function App() {
   const upperCost = () => {
     items = [...items.sort((a, b) => a.price < b.price ? 1 : -1)];
     items2 = [...items2.sort((a, b) => a.price < b.price ? 1 : -1)];
+    items3 = [...items3.sort((a, b) => a.price < b.price ? 1 : -1)];
     setItems(items);
     setItems2(items2);
+    setItems3(items3);
   };
   const downCost = () => {
     items = [...items.sort((a, b) => a.price > b.price ? 1 : -1)];
     items2 = [...items2.sort((a, b) => a.price > b.price ? 1 : -1)];
+    items3 = [...items3.sort((a, b) => a.price > b.price ? 1 : -1)];
     setItems(items);
     setItems2(items2);
+    setItems3(items3);
   };
   const vlablChoice = () => {
     axios.get('https://634f201e4af5fdff3a6ee8b5.mockapi.io/items').then((res) => {
@@ -62,6 +70,9 @@ function App() {
     });
     axios.get('https://634f201e4af5fdff3a6ee8b5.mockapi.io/items2').then((res) => {
       setItems2(res.data);
+    });
+    axios.get('https://635401c1ccce2f8c02013cf9.mockapi.io/items3').then((res) => {
+      setItems3(res.data);
     });
   };
 
@@ -93,6 +104,21 @@ function App() {
             <Route path="/desktop" element={
               <>
                 {items2.map((item, index) => (
+                  <Card 
+                    key={index}
+                    title={item.title}
+                    spec={item.spec}
+                    price={item.price}
+                    imageUrl={item.imageUrl}
+                    onBuy={onBuyButton}
+                  />
+                ))}
+              </>
+            }>
+            </Route>
+            <Route path="/iphone" element={
+              <>
+                {items3.map((item, index) => (
                   <Card 
                     key={index}
                     title={item.title}

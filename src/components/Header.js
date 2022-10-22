@@ -1,4 +1,5 @@
 import {Link} from "react-router-dom";
+
 function Header(props) {
     return (
         <header>
@@ -13,6 +14,11 @@ function Header(props) {
                     <Link to="/desktop">
                         <span className="header-store">
                             Desktop
+                        </span>
+                    </Link>
+                    <Link to="/iPhone">
+                        <span className="header-store">
+                            iPhone
                         </span>
                     </Link>
                 </div>
