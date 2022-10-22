@@ -1,5 +1,4 @@
 import BagCard from './BagCard';
-import React from 'react';
 import {ReactComponent as ArrowIcon} from '../svg/arrow-left.svg';
 import axios from 'axios';
 

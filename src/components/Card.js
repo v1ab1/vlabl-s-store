@@ -1,6 +1,6 @@
-import React from 'react';
+import {useState} from 'react';
 function Card({imageUrl, title, spec, price, onBuy}) {
-    const [isAdded, setIsAdded] = React.useState();
+    const [isAdded, setIsAdded] = useState();
     const onClickBuy = () => {
         setIsAdded(!isAdded);
         if (!isAdded) {
