@@ -8,8 +8,8 @@ import spin from './svg/spin.gif';
 import {Route, Routes} from "react-router-dom";
 
 function App() {
-  const [items, setItems] = useState([]);
-  const [items2, setItems2] = useState([]);
+  let [items, setItems] = useState([]);
+  let [items2, setItems2] = useState([]);
   const [bagItems, setBagItems] = useState([]);
   const [bagOpened, setBagOpened] = useState(false);
   const [handleBuying, setHandleBuying] = useState(true);
@@ -44,12 +44,33 @@ function App() {
     }
   };
 
+  const upperCost = () => {
+    items = [...items.sort((a, b) => a.price < b.price ? 1 : -1)];
+    items2 = [...items2.sort((a, b) => a.price < b.price ? 1 : -1)];
+    setItems(items);
+    setItems2(items2);
+  };
+  const downCost = () => {
+    items = [...items.sort((a, b) => a.price > b.price ? 1 : -1)];
+    items2 = [...items2.sort((a, b) => a.price > b.price ? 1 : -1)];
+    setItems(items);
+    setItems2(items2);
+  };
+  const vlablChoice = () => {
+    axios.get('https://634f201e4af5fdff3a6ee8b5.mockapi.io/items').then((res) => {
+      setItems(res.data);
+    });
+    axios.get('https://634f201e4af5fdff3a6ee8b5.mockapi.io/items2').then((res) => {
+      setItems2(res.data);
+    });
+  };
+
   return (
     <div className="wrapper">
       <Header onClickBag={() => setBagOpened(!bagOpened)} />
       <div className="content">
         {bagOpened && <Bag bagItems={bagItems} onRemove={onRemoveItem} handleBuy={handleBuying} setBuy={setHandleBuying} setOpen={setBagOpened} open={bagOpened} />}
-        <Filters />
+        <Filters upper={upperCost} down={downCost} vlabl={vlablChoice}/>
         <div className="items-wrapper">
           {items.length === 0 ? <img className='spin' src={spin} alt="" /> : null}
           <div className="items">
