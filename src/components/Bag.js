@@ -7,6 +7,7 @@ function Bag({bagItems = [], onRemove, handleBuy, setBuy, setOpen, open}) {
     function EmptyFormCheck() {
       const forms = document.getElementsByClassName("forms");
       for (let i in forms) {
+        forms[i].style.border = "1px solid #379afd";
         if(forms[i].value == '') {
           forms[i].style.border = "1px solid red";
         }
@@ -33,12 +34,20 @@ function Bag({bagItems = [], onRemove, handleBuy, setBuy, setOpen, open}) {
                   />
                 ))} 
                 {
-                  bagItems.length === 0 ? (<h1>Your bag is empty</h1>) : <div className='total-price' id="total"><span className="total-span">Price:</span><p><span className="total-span">$ </span>{bagItems.reduce((sum, obj) => obj.price + sum, 0)}</p></div>
+                  bagItems.length === 0 ? 
+                  (<h1>Your bag is empty</h1>)
+                  : 
+                  <>
+                    <div className='total-price' id="total">
+                      <span className="total-span">Price:</span>
+                      <p><span className="total-span">$ </span>{bagItems.reduce((sum, obj) => obj.price + sum, 0)}</p>
+                    </div>
+                    <button onClick={() => {setBuy(!handleBuy)}} className="buy-button">
+                      Check Out
+                    </button>
+                  </>
                 }
               </div>
-              <button onClick={() => {setBuy(!handleBuy)}} className="buy-button">
-                  Check Out
-              </button>
               </div>) :
               (
                 <>

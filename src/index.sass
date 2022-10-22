@@ -273,7 +273,15 @@ input::-webkit-inner-spin-button
 @media screen and (max-width: 560px)
   .card
     width: 100%
-  .content-header
-    flex-direction: column
-    div:last-of-type
-      margin-top: 10px
+@media screen and (max-width: 374px)
+  .cat-btns
+    display: flex
+    justify-content: space-between
+    width: 100%
+    padding: 0 5px
+    button
+      margin: 0
+      padding: 0
+    button:last-of-type
+      margin: 0
+      padding: 0
