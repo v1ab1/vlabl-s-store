@@ -16,6 +16,9 @@ function App() {
     axios.get('https://634f201e4af5fdff3a6ee8b5.mockapi.io/items').then((res) => {
       setItems(res.data);
     });
+    axios.get('https://634f201e4af5fdff3a6ee8b5.mockapi.io/bag').then((res) => {
+      setBagItems(res.data);
+    });
   }, []);
 
   const onBuyButton = (obj) => {
@@ -53,6 +56,7 @@ function App() {
   return (
     <div className="wrapper">
       <Header items={items} setItems={setItems} onClickBag={() => setBagOpened(!bagOpened)} />
+      {bagOpened ? <div onClick={() => setBagOpened(!bagOpened)} className="emptySpace"></div> : null }
       <div className="content">
         {bagOpened && <Bag onClickBag={() => setBagOpened(!bagOpened)} bagItems={bagItems} onRemove={onRemoveItem} handleBuy={handleBuying} setBuy={setHandleBuying} setOpen={setBagOpened} open={bagOpened} />}
         <Filters upper={upperCost} down={downCost} vlabl={vlablChoice}/>
