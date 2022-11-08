@@ -54,7 +54,7 @@ function App() {
     <div className="wrapper">
       <Header items={items} setItems={setItems} onClickBag={() => setBagOpened(!bagOpened)} />
       <div className="content">
-        {bagOpened && <Bag bagItems={bagItems} onRemove={onRemoveItem} handleBuy={handleBuying} setBuy={setHandleBuying} setOpen={setBagOpened} open={bagOpened} />}
+        {bagOpened && <Bag onClickBag={() => setBagOpened(!bagOpened)} bagItems={bagItems} onRemove={onRemoveItem} handleBuy={handleBuying} setBuy={setHandleBuying} setOpen={setBagOpened} open={bagOpened} />}
         <Filters upper={upperCost} down={downCost} vlabl={vlablChoice}/>
         <div className="items-wrapper">
           {items.length === 0 ? <img className='spin' src={spin} alt="" /> : null}
