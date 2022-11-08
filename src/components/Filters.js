@@ -23,9 +23,6 @@ function Filters({upper, down, vlabl}) {
                 <button onClick={down}>
                     Lower cost
                 </button>
-                <button onClick={vlabl}>
-                    Vlabl choice
-                </button>
             </div>
             <button id="sorting-button" onClick={openSortMenu}>
                 sorting

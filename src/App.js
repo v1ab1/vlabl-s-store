@@ -3,7 +3,7 @@ import Header from './components/Header';
 import Bag from './components/Bag';
 import Filters from './components/Filters';
 import axios from 'axios';
-import {useEffect,useState} from 'react';
+import { useEffect, useState } from 'react';
 import spin from './svg/spin.gif';
 
 function App() {
@@ -47,11 +47,6 @@ function App() {
     items = [...items.sort((a, b) => a.price > b.price ? 1 : -1)];
     setItems(items);
   };
-  const vlablChoice = () => {
-    axios.get('https://634f201e4af5fdff3a6ee8b5.mockapi.io/items').then((res) => {
-      setItems(res.data);
-    });
-  };
 
   return (
     <div className="wrapper">
@@ -59,7 +54,7 @@ function App() {
       {bagOpened ? <div onClick={() => setBagOpened(!bagOpened)} className="emptySpace"></div> : null }
       <div className="content">
         {bagOpened && <Bag onClickBag={() => setBagOpened(!bagOpened)} bagItems={bagItems} onRemove={onRemoveItem} handleBuy={handleBuying} setBuy={setHandleBuying} setOpen={setBagOpened} open={bagOpened} />}
-        <Filters upper={upperCost} down={downCost} vlabl={vlablChoice}/>
+        <Filters upper={upperCost} down={downCost} />
         <div className="items-wrapper">
           {items.length === 0 ? <img className='spin' src={spin} alt="" /> : null}
           <div className="items">
