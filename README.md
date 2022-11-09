@@ -4,7 +4,6 @@ My first practice on React. The project is a hardware store with a shopping cart
 ## How to launch?
 In the project directory, you can run:
 ### `npm start`
-<br>
 
 ## Technologies
 React.js on frontend (axios and sass included)
