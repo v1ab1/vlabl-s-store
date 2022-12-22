@@ -6,6 +6,8 @@ In the project directory, you can run:
 ### `npm start`
 
 ## Technologies
-React.js on frontend (axios and sass included)
-<br>
-Backend simulated with mock API
+React<br>
+React Router<br>
+Axios<br>
+Sass<br>
+mockAPI
