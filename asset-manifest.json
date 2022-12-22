@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/vlabl-s-npstore/static/css/main.2ccc2982.css",
+    "main.js": "/vlabl-s-npstore/static/js/main.efc5f153.js",
+    "static/media/spin.gif": "/vlabl-s-npstore/static/media/spin.6fc0289052ec546849ef.gif",
+    "static/media/SF-Pro-Display-Semibold.otf": "/vlabl-s-npstore/static/media/SF-Pro-Display-Semibold.037dc63930459813f575.otf",
+    "static/media/SF-Pro-Display-Medium.otf": "/vlabl-s-npstore/static/media/SF-Pro-Display-Medium.b85d841dacb040b84951.otf",
+    "static/media/SF-Pro-Display-Bold.otf": "/vlabl-s-npstore/static/media/SF-Pro-Display-Bold.b1f4d2c69fa808ebca12.otf",
+    "static/media/SF-Pro-Display-Regular.otf": "/vlabl-s-npstore/static/media/SF-Pro-Display-Regular.d1f5e6e16dd4f75c3950.otf",
+    "static/media/down-arrow.svg": "/vlabl-s-npstore/static/media/down-arrow.3fbefaf0165ce67b4d2d.svg",
+    "index.html": "/vlabl-s-npstore/index.html",
+    "static/media/cross.svg": "/vlabl-s-npstore/static/media/cross.04b9dc9cc7653d2d278a239687e39c91.svg",
+    "static/media/arrow-left.svg": "/vlabl-s-npstore/static/media/arrow-left.83aa775a65892efff8dd306eccced5ba.svg",
+    "main.2ccc2982.css.map": "/vlabl-s-npstore/static/css/main.2ccc2982.css.map",
+    "main.efc5f153.js.map": "/vlabl-s-npstore/static/js/main.efc5f153.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2ccc2982.css",
+    "static/js/main.efc5f153.js"
+  ]
+}
